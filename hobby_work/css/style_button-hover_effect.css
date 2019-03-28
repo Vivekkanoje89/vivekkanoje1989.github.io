@@ -1,0 +1,212 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+.nav{
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.nav-item{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: none;
+}
+
+.nav:hover .nav-item{
+    display: block;
+}
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item ul li{
+    list-style: none;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    margin-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    animation: dropdown 1s linear;
+}
+
+.nav-item ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropdown{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.home-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    /* text-align: center;
+    margin-top: 360px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: .8s;
+}
+
+.btn1, .btn2{
+    color: #3498db;
+}
+
+.btn3, .btn4{
+    color: #fff;
+}
+
+.btn1:hover, .btn2:hover{
+    color: #fff;
+}
+
+.btn3:hover, .btn4:hover{
+    color: #3498db;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: .8s;
+}
+
+.btn1::before, .btn3::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn2::before, .btn4::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.btn3::before, .btn4::before{
+   height: 180%;
+}
+
+.btn1:hover::before, .btn2:hover::before{
+   height: 180%;
+}
+
+.btn3:hover::before, .btn4:hover::before{
+    height: 0%;
+}
+
+
+.btn-sp{
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+    border: 1px solid #3498db;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-align: center;
+    transition: 1s all ease;
+}
+
+.btn-sp::before{
+    content: "";
+    background: #3498db;
+    /* width: 100%;
+    height: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: 1s all ease;
+}
+
+.btn-sp.sp1::before{
+    width: 0%;
+    height: 100%;
+}
+
+.btn-sp.sp1:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-sp.sp2::before{
+    width: 100%;
+    height: 0%;
+}
+
+.btn-sp.sp2:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-sp.sp3::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-sp.sp3:hover::before{
+    height: 580%;
+}
+
+.btn-sp.sp4::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-sp.sp4:hover::before{
+    height: 580%;
+}

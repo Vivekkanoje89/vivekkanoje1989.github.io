@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+.nav{
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.nav-item{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: none;
+}
+
+.nav:hover .nav-item{
+    display: block;
+}
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item ul li{
+    list-style: none;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    margin-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    animation: dropdown 1s linear;
+}
+
+.nav-item ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropdown{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.home-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    margin: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.contact-method{
+    width: 300px;
+    height: 150px;
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-method i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 140px;
+    background: #34495e;
+    z-index: 1;
+    transition: transform .6s; 
+}
+
+.contact-method span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.contact-method i:hover{
+    transform: translateY(-30%);
+}
+

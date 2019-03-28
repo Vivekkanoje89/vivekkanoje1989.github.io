@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: linear-gradient(30deg, purple, cornflowerblue);
+    height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.nav-item{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: none;
+}
+
+.nav:hover .nav-item{
+    display: block;
+}
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item ul li{
+    list-style: none;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    margin-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    animation: dropdown 1s linear;
+}
+
+.nav-item ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropdown{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.home-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu{
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.item{
+    border-top: 1px solid #2980b9;
+    overflow: hidden;
+}
+
+.btn{
+    display: block;
+    padding: 16px 20px;
+    background: #3498db;
+    color: white;
+    position: relative;
+}
+
+.btn:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #3498db;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.btn i{
+    margin-right: 10px;
+}
+
+.smenu{
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.smenu a {
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+
+.smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #3498db;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.smenu a:hover:before{
+    opacity: 1;
+}
+
+.item:target .smenu{
+    max-height: 10em;
+}

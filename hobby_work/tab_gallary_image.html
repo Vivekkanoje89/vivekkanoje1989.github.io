@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab Gallary image</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+    <link rel="stylesheet" href="./css/style_tab_gallary_image.css">
+</head>
+<body>
+    <div class="images">
+        <img onclick="changeImg(this)" src="./images/1.jpg" alt="">
+        <img onclick="changeImg(this)" src="./images/2.jpg" alt="">
+        <img onclick="changeImg(this)" src="./images/3.jpg" alt="">
+        <img onclick="changeImg(this)" src="./images/4.jpg" alt="">
+    </div>
+
+    <div class="pre">
+        <a onclick="this.parentElement.style.display='none'" class="fas fa-times"></a>
+        <img id="p" src="./images/1.jpg" alt="">
+    </div>
+
+    <script>
+        function changeImg(image){
+            var p = document.getElementById("p");
+            p.src = image.src;
+            p.parentElement.style.display="block";
+        }
+    </script>
+</body>
+</html>

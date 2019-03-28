@@ -1,0 +1,161 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.nav{
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.nav-item{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: none;
+}
+
+.nav:hover .nav-item{
+    display: block;
+}
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item ul li{
+    list-style: none;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    margin-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    animation: dropdown 1s linear;
+}
+
+.nav-item ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropdown{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.home-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+.portfolio{
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 1em;
+    padding: 5em;
+    background: #333;
+}
+
+.portfolio img{
+    width: 100%;
+    height: auto;
+}
+
+.portfolio__item{
+    background: #fff;
+}
+
+.portfolio__desc{
+    padding: 1em;
+}
+
+.portfolio__title{
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.portfolio-lightboxes img{
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-lightbox{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0, .5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0, 0);
+    transform-origin: top right;
+    transition: transform ease-in-out 500ms;
+}
+
+.portfolio-lightbox:target{
+    transform: scale(1,1);
+    transform-origin: top left;
+}
+
+.portfolio-lightbox__content{
+    width: 75%;
+    background: black;
+    padding: 1em;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: red;
+    top: -1em;
+    right: -1em;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close::after{
+    content: 'X';
+    color: white;
+    font-weight: 700;
+}

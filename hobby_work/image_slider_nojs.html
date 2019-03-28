@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Slider Nojs</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./css/style_image_slider_nojs.css">
+</head>
+
+<body>
+    <div class="slidershow middle">
+
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+            <div class="slide s1">
+                <img src="./images/sl1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./images/sl2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./images/sl3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./images/sl4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./images/sl5.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+            <label for="r5" class="bar"></label>
+        </div>
+    </div>
+
+    <!-- <script>
+        var mainSlide = document.getElementsByClassName('s1');
+        var selectors = document.getElementsByClassName('bar');
+        var next = 0;
+        var loop = 0;
+
+        function autoslide() {
+            if (loop == 0) {
+                if (next == 80) {
+                    loop = 1;
+                } else {
+                    next += 20;
+                }
+
+                if (next == 0) {
+                    selectors[0].style.background = '#fff';
+                } else if (next == 20) {
+                    selectors[0].style.background = 'none';
+                    selectors[1].style.background = '#fff';
+
+                } else if (next == 40) {
+                    selectors[1].style.background = 'none';
+                    selectors[2].style.background = '#fff';
+
+                } else if (next == 60) {
+                    selectors[2].style.background = 'none';
+                    selectors[3].style.background = '#fff';
+
+                } else if (next == 80) {
+                    selectors[3].style.background = 'none';
+                    selectors[4].style.background = '#fff';
+                }
+            } else {
+                if (next == 0) {
+                    loop = 0;
+                } else {
+                    next -= 20;
+                }
+
+                if (next == 0) {
+                    selectors[0].style.background = '#fff';
+                    selectors[1].style.background = 'none';
+                } else if (next == 20) {
+                    selectors[1].style.background = '#fff';
+                    selectors[2].style.background = 'none';
+
+                } else if (next == 40) {
+                    selectors[2].style.background = '#fff';
+                    selectors[3].style.background = 'none';
+                } else if (next == 60) {
+                    selectors[3].style.background = '#fff';
+                    selectors[4].style.background = 'none';
+                } else if (next == 80) {
+                    selectors[4].style.background = '#fff';
+                }
+            }
+
+
+            mainSlide[0].style.marginLeft = "-" + next + "%";
+        }
+
+        var stInvl = setInterval(() => {
+            autoslide();
+        }, 2000);
+
+        setTimeout(()=>{
+            clearInterval(stInvl);
+        }, 3000);
+    </script> -->
+</body>
+
+</html>

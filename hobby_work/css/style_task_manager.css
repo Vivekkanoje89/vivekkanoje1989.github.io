@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    font-family: "montserrat", sans-serif;
+}
+
+.nav{
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.nav-item{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: none;
+}
+
+.nav:hover .nav-item{
+    display: block;
+}
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item ul li{
+    list-style: none;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    margin-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    animation: dropdown 1s linear;
+}
+
+.nav-item ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropdown{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.home-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task-list{
+    width: 400px;
+    padding: 40px;
+    background: url('../images/task_manager_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.task-list h2{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.task{
+    display: flex;
+    padding:  10px 0;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task input{
+    position: absolute;
+    visibility: hidden;
+}
+
+.task i{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    margin-right: 14px;
+    color: transparent;
+}
+
+.text{
+    font-size: 18px;
+    color: #fff;
+}
+
+.task input:checked ~ i{
+    color: #e74c3c;
+}
+
+.task input:checked ~ .text{
+    text-decoration: line-through;
+    color: #e74c3c;
+}

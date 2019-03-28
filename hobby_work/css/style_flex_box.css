@@ -1,0 +1,138 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #c1c1c1;
+}
+
+.container{
+    width: 80%;
+    margin: 1em auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 4px 4px 20px #333;
+    display: flex;
+}
+
+.main_content{
+    flex: 2;
+    order: 2;
+}
+
+.left_side_bar{
+    flex: 1;
+    order: 1;
+}
+
+.right_side_bar{
+    flex: 1;
+    order: 3;
+}
+
+.col-out-container{
+    width: 80%;
+    margin: 1em auto;
+    /* display: flex; */
+    /* align-items: flex-start; this will wrap container with height as inside content and align from top  */
+    /* align-items: flex-end; aligns at bottom line */
+    /* align-items: flex-end; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+}
+
+.col-out{
+    /* flex: 1; */
+    padding: .5em;
+    flex-basis : 30%;
+}
+
+.col-out:nth-child(1){
+    background: rgb(146, 247, 216);
+}
+
+.col-out:nth-child(2){
+    background: rgb(103, 245, 138);
+
+}
+
+.col-out:nth-child(3){
+    background: rgb(218, 146, 247);
+
+}
+
+@media (min-width: 900px){
+    .col-out-container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.flexGallary{
+    display: flex;
+    width: 80%;
+    margin: 2em auto;
+    background: #fff;
+    padding: 1em;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gallary__num{
+    width: 150px;
+    height: 100px;
+    background: rgb(107, 12, 12);
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.banner{
+    width: 500px;
+    height: 500px;
+    margin: 1em auto;
+    background: #333;
+    color: floralwhite;
+    display: flex;
+}
+
+.center-me{
+    font-size: 2em;
+    margin: auto;
+}
+
+.row-col{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    background: #fff;
+}
+
+.first{
+    padding: 1em;
+    flex: 1;
+}
+
+.second{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.second__blue{
+    background:rgb(146, 247, 216);
+    flex: 1;
+}
+
+.second__green{
+    background: rgb(103, 245, 138);
+    flex: 1;
+}

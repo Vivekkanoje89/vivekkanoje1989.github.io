@@ -1,0 +1,196 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #ffeaa7;
+}
+
+.nav{
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.nav-item{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: none;
+
+}
+
+.nav:hover .nav-item{
+    display: block;
+}
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item ul li{
+    list-style: none;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    margin-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    animation: dropdown 1s linear;
+}
+
+.nav-item ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropdown{
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.home-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.card{
+    max-width: 340px;
+    background: #f1f1f1;
+    overflow: hidden;
+    font-family: "montserrat", sans-serif;
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.404);
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-section{
+    position: relative;
+}
+
+.top-section img{
+    width: 100%;
+}
+
+.menuicon{
+    position: absolute;
+    width: 22px;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menuicon span{
+    position: relative;
+    display:  block;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    margin-bottom: 6px;
+    opacity: .5;
+    transition: .4s;
+}
+
+.menuicon .s1{
+    left: -5px;
+}
+
+.menuicon .s2{
+    left: 5px;
+}
+
+.menuicon:hover span{
+    left: 0;
+}
+
+.name{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    opacity: .5;
+}
+
+.name span{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.info-section{
+    padding: 0px 40px 40px 40px;
+    color: #333;
+}
+
+.info-section .heading{
+    position: relative;
+}
+.info-section .heading h2{
+    position: relative;
+    font-size: 16px;
+}
+
+.info-section .heading .border{
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background: #779beb;
+    left: 0;
+    bottom: -6px;
+}
+
+.info-section p{
+    text-align: justify;
+    font-size: 14px;
+}
+
+.s-m{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.s-m a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    padding: 0 14px;
+    transition: .4s;
+}
+
+.s-m .list-item{
+    list-style: none;
+}
+
+.s-m a:hover{
+    color: #779beb;
+}
+
+@media screen and (max-width:750px){
+    .card{
+        width: 100%;
+    }
+}

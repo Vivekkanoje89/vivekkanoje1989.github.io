@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moving Eyes Effect</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./css/style_moving_eyes_effect.css">
+</head>
+
+<body>
+    <div class="eyes">
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+    </div>
+
+    <script>
+        var balls = document.getElementsByClassName('ball');
+
+        document.onmousemove = () => {
+            var x =  event.clientX * 100 / window.innerWidth +"%";
+            var y =  event.clientY * 100 / window.innerHeight +"%";
+
+            for(i=0; i<2; i++){
+                balls[i].style.left = x;
+                balls[i].style.top = y;
+                balls[i].style.transform = "translate(-"+x+""+y+")";
+                // balls[i].style.transition = ".4s";
+            }
+        }
+    </script>
+</body>
+
+</html>
