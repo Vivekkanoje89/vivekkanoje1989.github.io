@@ -6,58 +6,6 @@ body{
     background-attachment: fixed;
 }
 
-.nav{
-    position: fixed;
-    width: 30%;
-    height: 50%;
-    cursor: pointer;
-}
-
-.nav-item{
-    position: absolute;
-    top: 60px;
-    left: 10px;
-    display: none;
-}
-
-.nav:hover .nav-item{
-    display: block;
-}
-
-.nav-item ul{
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item ul li{
-    list-style: none;
-    background: rgba(0, 0, 0, .2);
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 18px;
-    box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
-    margin-bottom: 5px;
-    text-align: center;
-    transition: .5s;
-    animation: dropdown 1s linear;
-}
-
-.nav-item ul li a{
-    text-decoration: none;
-    color: white;
-}
-
-@keyframes dropdown{
-    0% {
-        opacity: 0;
-        transform: rotateY(-90deg);
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0deg);
-    }
-}
-
 .home-btn{
     position: fixed;
     top: 10px;
@@ -67,6 +15,7 @@ body{
     padding: 10px;
     font-size: 18px;
     box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    z-index: 2;
 }
 
 .home-btn a{

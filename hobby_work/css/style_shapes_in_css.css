@@ -15,6 +15,7 @@ body{
     padding: 10px;
     font-size: 18px;
     box-shadow: 2px 2px 05px rgba(0, 0, 0, .4);
+    z-index: 12;
 }
 
 .home-btn a{
@@ -51,7 +52,7 @@ section{
     height: 150px;
     background: #FFC145;
     bottom: -1em;
-    z-index: 100;
+    z-index: 11;
 }
 
 .one::before{

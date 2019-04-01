@@ -52,7 +52,7 @@ nav a.active{
 
 .main-content{
     flex: 1 1 90%;
-    padding: 10%;
+    padding: 2rem;
     min-height: 100vh;
 }
 

@@ -24,7 +24,6 @@ body {
 }
 
 .content {
-    /* background: white; */
     background-color: rgb(255, 255, 255);
     width: 70vw;
     padding: 3em;
@@ -97,7 +96,6 @@ body {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     /* background-image: conic-gradient(yellow 0, yellow 90deg, black 90deg, black 180deg, yellow 180deg, yellow 270deg, black 270deg, black 360deg); */
     background-image: conic-gradient(yellow 0, yellow 63deg, black 63deg, black 180deg, yellow 180deg, yellow 243deg, black 240deg);
-    
 }
 
 .cubes{
